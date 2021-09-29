@@ -16,8 +16,8 @@ class Node:
         self.next_node = next_node
 
     @property
-    """get/set data for the node"""
     def data(self):
+        """get/set data for the node"""
         return(self.__data)
 
     @data.setter
@@ -25,8 +25,8 @@ class Node:
         self.__data = value
 
     @property
-    """get/set node fot the next node"""
     def next_node(self):
+        """get/set node fot the next node"""
         return(self.__next_node)
 
     @next_node.setter
