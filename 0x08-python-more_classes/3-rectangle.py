@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-File: 2-rectangle.py
+File: 3-rectangle.py
 
 Author: Samson Tedla <samitedla23@gmail.com>
 
@@ -58,3 +58,16 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """method that prints rectangle with #"""
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        rect = []
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rect.append("#")
+            if i != self.__height - 1:
+                rect.append("\n")
+        return("".join(rect))
