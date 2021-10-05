@@ -1,0 +1,46 @@
+"""
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation("Hello.World")
+Hello.
+<BLANKLINE>
+World
+>>> text_indentation("Hello.   World.")
+Hello.
+<BLANKLINE>
+World.
+<BLANKLINE>
+>>> text_indentation("Hello.World   .")
+Hello.
+<BLANKLINE>
+World   .
+<BLANKLINE>
+>>> text_indentation("Hello:World")
+Hello:
+<BLANKLINE>
+World
+>>> text_indentation("Hello:   World:")
+Hello:
+<BLANKLINE>
+World:
+<BLANKLINE>
+>>> text_indentation("Hello:World   :")
+Hello:
+<BLANKLINE>
+World   :
+<BLANKLINE>
+>>> text_indentation("Hello?World")
+Hello?
+<BLANKLINE>
+World
+>>> text_indentation("Hello?   World?")
+Hello?
+<BLANKLINE>
+World?
+<BLANKLINE>
+>>> text_indentation("Hello?World   ?")
+Hello?
+<BLANKLINE>
+World   ?
+<BLANKLINE>
+
+"""
