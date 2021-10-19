@@ -38,3 +38,6 @@ class TestRectangle_instantiation(unittest.TestCase):
 
     def test_five_args(self):
         self.assertEqual(5, Rectangle(1, 2, 3, 4, 5).id)
+
+if __name__ == "__main__":
+    unittest.main()

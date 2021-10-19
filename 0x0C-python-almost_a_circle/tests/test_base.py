@@ -38,3 +38,6 @@ class TestBase_instantiation(unittest.TestCase):
         b = Base(10)
         b.id = 11
         self.assertEqual(11, b.id)
+
+if __name__ == "__main__":
+    unittest.main()
