@@ -7,8 +7,10 @@ Author: Samson Tedla <samitedla23@gmail.com>
 Defines a class called Base
 """
 
+
 class Base:
     __nb_objects = 0
+
     def __init__(self, id=None):
         if id is not None:
             self.id = id
