@@ -6,7 +6,7 @@ Author: Samson Tedla <samitedla23@gmail.com>
 
 Defines a class called Base
 """
-
+import json
 
 class Base:
     __nb_objects = 0
