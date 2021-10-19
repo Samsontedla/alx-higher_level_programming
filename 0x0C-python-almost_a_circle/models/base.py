@@ -69,11 +69,19 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Returns an instance by processing a dictionary"""
-        li = []
-        dummy = cls(1, 1)
-        dummy.update(**dictionary)
-        return dummy
+        """
+        Returns an instance by processing a dictionary
+
+        Args:
+            **dictionary (dict): Key/value pairs of attributes to initialize
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                dummy = cls(1, 1)
+            else:
+                dummy = cls(1)
+            dummy.update(**dictionary)
+            return dummy
 
     @classmethod
     def load_from_file(cls):
