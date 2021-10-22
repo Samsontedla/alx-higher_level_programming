@@ -8,6 +8,7 @@ Defines a class called Base
 """
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -133,3 +134,37 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw Rectangles and Squares using the turtle module.
+        Args:
+            list_rectangles (list): A list of Rectangle objects to draw.
+            list_squares (list): A list of Square objects to draw.
+        """
+        draw = turtle.Turtle()
+
+        for rect in list_rectangles:
+            draw.showturtle()
+            draw.up()
+            draw.goto(rect.x, rect.y)
+            draw.down()
+            for i in range(2):
+                draw.forward(rect.width)
+                draw.left(90)
+                draw.forward(rect.height)
+                draw.left(90)
+            draw.hideturtle()
+
+        for sq in list_squares:
+            draw.showturtle()
+            draw.up()
+            draw.goto(sq.x, sq.y)
+            draw.down()
+            for i in range(2):
+                draw.forward(sq.width)
+                draw.left(90)
+                draw.forward(sq.height)
+                draw.left(90)
+            draw.hideturtle()
+
