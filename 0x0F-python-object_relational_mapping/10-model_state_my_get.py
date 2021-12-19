@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script that prints the State object with the name 
+script that prints the State object with the name
 passed as argument from the database hbtn_0e_6_usa
 """
 import sys
@@ -14,7 +14,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     found = False
 
     for state in session.query(State):
@@ -22,5 +22,5 @@ if __name__ == "__main__":
             print("{}".format(state.id))
             found = True
             break
-    if found == False:
+    if found is False:
         print("Not found")
