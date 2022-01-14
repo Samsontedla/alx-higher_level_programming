@@ -5,8 +5,13 @@ to display your id
 """
 if __name__ == '__main__':
     import requests
-    from requests.auth import HTTPBasicAuth
-    from sys import argv
-    r = requests.get('https://api.github.com/users/{}'.format(argv[1]),
-                     auth=HTTPBasicAuth(argv[1], argv[2]))
-    print(r.json().get('id'))
+    from sys
+
+    user = sys.argv[1]
+    token = sys.argv[2]
+    headers = {
+              'Authorization': 'token {}'.format(token),
+              'Accept': 'application/vnd.github.v3+json',
+              }
+    res = requests.get('https://api.github.com/user', headers=headers)
+    print(res.json().get('id', 'None'))
